@@ -286,6 +286,7 @@ pub fn additional_argument(args: []const [:0]const u8, short: *const [2:0]u8, lo
 }
 
 test "additional_argument ok for short" {
+    // cli arguments mock
     const args: []const [:0]const u8 = &.{
         "/home/user/.cache/zig/o/fbae78c4fd5bbf983752b5d644ad3814/main",
         "-w",
@@ -303,6 +304,7 @@ test "additional_argument ok for short" {
 }
 
 test "additional_argument ok for long" {
+    // cli arguments mock
     const args: []const [:0]const u8 = &.{
         "/home/user/.cache/zig/o/fbae78c4fd5bbf983752b5d644ad3814/main",
         "-w",
@@ -320,6 +322,7 @@ test "additional_argument ok for long" {
 }
 
 test "additional_argument err for long without value" {
+    // cli arguments mock
     const args: []const [:0]const u8 = &.{
         "/home/user/.cache/zig/o/fbae78c4fd5bbf983752b5d644ad3814/main",
         "-w",
@@ -335,6 +338,7 @@ test "additional_argument err for long without value" {
 }
 
 test "additional_argument err for long with one dash" {
+    // cli arguments mock
     const args: []const [:0]const u8 = &.{
         "/home/user/.cache/zig/o/fbae78c4fd5bbf983752b5d644ad3814/main",
         "-w",
@@ -351,6 +355,7 @@ test "additional_argument err for long with one dash" {
 }
 
 test "additional_argument err for specified but not passed" {
+    // cli arguments mock
     const args: []const [:0]const u8 = &.{
         "/home/user/.cache/zig/o/fbae78c4fd5bbf983752b5d644ad3814/main",
         "-w",
