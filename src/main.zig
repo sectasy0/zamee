@@ -194,6 +194,8 @@ pub fn main() u8 {
         return handle_argument(arg, args, index);
     }
 
-    show_help();
+    show_help() catch {
+        return @intFromEnum(ExitCodes.STDOUT_FAILURE);
+    };
     return @intFromEnum(ExitCodes.INVALID_ARGUMENT);
 }
