@@ -45,9 +45,11 @@ zamee may produce the following error codes to help you diagnose and troubleshoo
 
 - `Error Code 1`: Invalid arguments specified. This error occurs when the command-line arguments are incorrect or missing.
 - `Error Code 2`: Invalid physical address format. It indicates that the MAC address provided is not in the correct format.
-- `Error Code 3`: Failed to create or send the WoL payload. This error suggests that there was an issue with sending the magic packet.
-	`(May be caused by insufficient permissions due to use of port number 9)`
-- `Error Code 4`: Invalid IPv4 broadcast address format. If the specified broadcast address is not in the expected IPv4 format, this error code will be triggered.
+- `Error Code 3`: Failed to create or send the WoL payload. This error suggests that there was an issue with sending the magic packet. This can be caused by insufficient permissions, often due to the use of port number 9 for Wake-on-LAN.
+- `Error Code 4`: Failed to send the WoL payload. This error occurs when the Wake-on-LAN payload was not successfully sent. `(May be caused by insufficient permissions due to use of port number 9)`
+- `Error Code 5`: Invalid IPv4 broadcast address format. If the specified broadcast address is not in the expected IPv4 format, this error code will be triggered.
+- `Error Code 6`: Stdout failed while printing. This error code is triggered when there is an issue with standard output during the printing process.
+- `Error Code 7`: Argument allocator failed. This error suggests that there was a problem with allocating memory for command-line arguments.
 
 ## Release history
 
